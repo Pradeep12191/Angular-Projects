@@ -1,0 +1,60 @@
+﻿
+<style>
+    .div{
+        height:450px;
+        width:600px;
+    }
+
+    .div-1{
+        height:450px;
+        width:300px;
+    }
+
+    .div-1, .div{ display:inline-block }
+
+    .x-axis .domain, .center-axis .domain, .header-y-axis-1 .domain, .header-y-axis-2 .domain, .header-y-axis-3 .domain, .separator-line, .vertical-separator{
+        stroke:#000;
+        fill:none;
+        shape-rendering:crispEdges;
+    }
+
+    text{
+        font-size:10px;
+    }
+</style>
+
+
+<!--<div >
+    <div ng-repeat="item in $mctrl.data" style="display:inline-block"
+         app-more-grp-bar-chart
+         group-data="item"
+         group-title="{{$mctrl.groupTitle}}"
+         hide-y-axes="{{$mctrl.hideYAxes}}"
+         group-bar-colors="$mctrl.colors"
+         class="div">
+    </div>
+</div>
+
+<div app-more-grp-bar-chart
+     group-data="$mctrl.data[1]"
+     group-title="{{$mctrl.groupTitle}}"
+     hide-y-axes="true"
+     group-bar-colors="$mctrl.colors"
+     class="div">
+</div>-->
+
+<div app-more-grp-bar-chart
+     group-data="$mctrl.data[0]"
+     group-title="{{$mctrl.groupTitle}}"
+     hide-y-axes="true"
+     group-bar-colors="$mctrl.colors"
+     class="div">
+</div>
+
+<div app-more-grp-bar-chart
+     group-data="$mctrl.data[1]"
+     group-title="{{$mctrl.groupTitle}}"
+     hide-y-axes="false"
+     group-bar-colors="$mctrl.colors"
+     class="div-1">
+</div>

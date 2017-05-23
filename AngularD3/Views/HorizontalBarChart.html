@@ -1,0 +1,33 @@
+﻿"Negative Bar Chart"
+
+<style>
+    .div{
+        height:550px;
+        /*width:1000px;*/
+    }
+
+    .y-axes .domain, .label-y-axis .domain{
+        stroke:#000;
+        fill:none;
+        shape-rendering:crispEdges;
+    }
+
+    .label-y-axis text{
+        font-size:13px;
+    }
+
+</style>
+
+<div app-axis>
+
+</div>
+<div app-grp-bar-chart
+     grp-bar-data ="$hBarCtrl.data2"
+     grp-bar-colors ="$hBarCtrl.colors"
+     grp-title ="{{$hBarCtrl.groupTitle}}"
+     class="div"
+     style="position:relative"
+     > 
+    <div style="position:absolute; left:200px;">Quater</div>
+    <div style="position:absolute;">Name</div>
+</div>

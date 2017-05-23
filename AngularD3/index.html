@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/DonutController.js"></script>
+    <script src="Scripts/HorizonBar.controller.js"></script>
+    <script src="Scripts/MoreBarGroupChart.controller.js"></script>
+    <script src="Scripts/SingleFullChart.controller.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/d3.v3.js"></script>
+    <script src="Scripts/charts.app.js"></script>
+	<meta charset="utf-8" />
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <a ui-sref="lineChart">Line Chart</a>
+    <a ui-sref="donutChart">Donut Chart</a>
+    <a ui-sref="barChart">Bar Chart</a>
+    <a ui-sref="hBarChart">Horizontal Bar Chart</a>
+    <a ui-sref="mBarChart">2d group bar chart</a>
+    <a ui-sref="singleBarChart">single group bar chart</a>
+    <a ui-sref="tooltip">tool tip</a>
+    <div ui-view></div>
+</body>
+</html>

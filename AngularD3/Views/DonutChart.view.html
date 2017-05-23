@@ -1,0 +1,141 @@
+﻿"Donut chart"
+<style>
+        /*.div{
+        height:150px;
+        width:300px;
+    }*/
+
+
+.app-popover{
+    z-index:9999;
+    display:none;
+}
+
+.shadow-container{
+-webkit-box-shadow: 0px 3px 81px -18px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 3px 81px -18px rgba(0,0,0,0.94);
+box-shadow: 0px 3px 81px -18px rgba(0,0,0,0.94);
+}
+
+.legend text, .labels text{
+    font-size:10px;
+}
+
+
+.arrow{
+    height:0;
+    width:0;
+    border-bottom:10px solid #eaf2f9;
+    border-left: 10px solid transparent;
+    border-right:10px solid transparent;
+    margin:auto;
+
+}
+
+.arrow-container{
+    background:transparent;
+    pointer-events:none;
+}
+
+.app-popover .popover-header{
+    background-color:#eaf2f9;
+    /*height:40px;*/
+    padding:10px;
+}
+
+.app-popover:after, .app-popover:before{
+    bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.app-popover:after{
+    	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #eaf2f9;
+	border-width: 12px;
+    margin-left:-12px;
+}
+</style>
+<div class="row">
+    <div class="col-lg-6">
+        <div app-donut-chart
+             donut-inner-radius="{{$dctrl.innerRadius}}"
+             donut-width="{{$dctrl.width}}"
+             donut-height="{{$dctrl.height}}"
+             donut-data="$dctrl.dataset"
+             donut-colors="$dctrl.chartColors"
+             donut-value-property="value"
+             donut-text-property="label"
+             donut-show-legend ="{{$dctrl.showLegend}}"
+             donut-show-popover ="{{$dctrl.showPopover}}"
+             class="div" style="position:relative">
+            <div class="app-popover" style="position:absolute">
+                <div class="shadow-container">
+                    <div class="popover-header" style="he">
+                        <div class="">Insititutions</div>
+                        <div class="legend-label">Value</div>
+                    </div>
+                    <div style="background-color:white">
+                        <div>Panel Options</div>
+                        <div>
+                            <ul>
+                                <li>Inspect this</li>
+                                <li>Add to reading list</li>
+                                <li>Add comment</li>
+                            </ul>
+                        </div>
+                        <div>
+                            flag
+                        </div>
+                        <div app-legend
+                             legend-data="$dctrl.legendData"
+                             legend-colors="$dctrl.legendColors ">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="height">Height:</label>
+                <div class="col-sm-10">
+                    <input type="number" ng-model="$dctrl.height" class="form-control" id="height" placeholder="Height">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="width">Width:</label>
+                <div class="col-sm-10">
+                    <input type="number" ng-model="$dctrl.width" class="form-control" id="width" placeholder="Width">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="width">Inner Radius:</label>
+                <div class="col-sm-10">
+                    <input type="number" ng-model="$dctrl.innerRadius" class="form-control" id="width" placeholder="Inner Radius">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" ng-model="$dctrl.showLegend" />Show Legend</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" ng-model="$dctrl.showPopover" />Show Popover on Donut Click</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

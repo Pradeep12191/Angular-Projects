@@ -1,0 +1,31 @@
+﻿"Bar Chart"
+
+<style>
+     .y-axis .tick:first-child{
+        display:none;
+    }
+
+    .y-axis .tick-line{
+        fill-opacity:0.7;
+        fill:#7cafdf
+    }
+
+    .x-axis text{
+        font-size:15px;
+        font-weight:600;
+    }
+
+    div[app-bar-chart]{
+        height:250px;
+        width:600px;
+        background-color:#eaf2f9
+    }
+</style>
+
+<div app-bar-chart
+     bar-data="axisData"
+     bar-x-key="percent"
+     bar-y-key="value"
+     bar-colors="barColors">
+
+</div>
